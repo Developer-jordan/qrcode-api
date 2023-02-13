@@ -3,12 +3,10 @@ const qrcode = require("qrcode");
 const port = process.env.PORT || 3000;
 const app = express();
 app.get("/", async function (req, res) {
-  res
-    .status(200)
-    .send({
-      message:
-        "quary this api by using ?text= at the end of this url and then the text you want to turn into a qrcode.The qr code is return as an blob",
-    });
+  res.status(200).send({
+    message:
+      "quary this api by using tis endpoint and quary /generate?text= at the end of this url and then the text you want to turn into a qrcode.The qr code is return as an blob no json data will be returned",
+  });
 });
 app.get("/generate", async function (req, res) {
   try {

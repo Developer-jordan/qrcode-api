@@ -2,6 +2,14 @@ const express = require("express");
 const qrcode = require("qrcode");
 const port = process.env.PORT || 3000;
 const app = express();
+app.get("/", async function (req, res) {
+  res
+    .status(200)
+    .send({
+      message:
+        "quary this api by using ?text= at the end of this url and then the text you want to turn into a qrcode.The qr code is return as an blob",
+    });
+});
 app.get("/generate", async function (req, res) {
   try {
     let text = req.query.text;

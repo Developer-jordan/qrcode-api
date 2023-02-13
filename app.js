@@ -20,5 +20,5 @@ app.get("/generate", async function (req, res) {
   }
 });
 app.listen(port, () => {
-  console.log(`API listening on port ${port}`);
+  console.log(`API listening PORT ${port}`);
 });
